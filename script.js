@@ -99,3 +99,8 @@ window.addEventListener("resize", update);
 
 // Footer year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Placeholder links (href="#") do nothing until a real URL is added
+document.querySelectorAll('a[href="#"]').forEach((a) =>
+  a.addEventListener("click", (e) => e.preventDefault())
+);
